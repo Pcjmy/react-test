@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const jsx = (
-  <div>
-    <span>big-react</span>
-  </div>
-)
+function App() {
+  return (
+    <div>
+      <Child />
+    </div>
+  )
+}
 
-ReactDOM.createRoot(document.getElementById('root')).render(jsx);
+function Child() {
+  return <span>big-react</span>
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 
 console.log(React);
-console.log(jsx);
+console.log(<App />);
 console.log(ReactDOM);
